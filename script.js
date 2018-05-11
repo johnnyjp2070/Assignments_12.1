@@ -1,13 +1,15 @@
+
 function counterReducer(actionType, counter) {
     if(actionType === "INC"){
-        counter += 1;
-        change = "Incremented"
+        counter = counter + 1;
     } else if (actionType === "DEC"){
-        counter -= 1;
-        change = "Decremented"
+        counter = counter -  1;
     }
     return counter;
 }
 
 var result = counterReducer('DEC', 5);
-console.log(change+" - "+result);
+console.log("Decremented: Resultant value is "+ result);
+
+var result = counterReducer('INC', 99);
+console.log("Incremented: Resultant value is "+ result);
